@@ -1,0 +1,149 @@
+.main-info-section-token {
+    @include container;
+    background: #f6f5ef;
+    display: flex;
+    @include small-mobile {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-token-cards {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        background: url("./images/cardbg.png") center no-repeat;
+
+        @include small-mobile {
+            width: 100%;
+        }
+
+        .main-card {
+            width: 15rem;
+            height: 20rem;
+            border-radius: 5px;
+            background-color: #fffef6;
+            box-shadow: 2px 3px 6px rgb(207, 207, 207);
+        }
+
+        & .main-card:last-of-type {
+            margin-top: 10em;
+        }
+
+        .bitcoin-icon,
+        .viacoin-icon {
+            background-color: #0f393b;
+            border: 5px solid #a2e4f0;
+            color: white;
+            height: 4.1rem;
+            width: 4.1rem;
+            font-size: 2.1rem;
+            text-align: center;
+            padding-top: 0.5rem;
+            position: relative;
+            top: -10%;
+            left: 35%;
+            border-radius: 50%;
+
+            @include small-mobile {
+                border: 1.5px solid #a2e4f0;
+            }
+        }
+
+        .card-title,
+        .card-subtitle,
+        .card-price,
+        .card-pricechange {
+            text-align: center;
+            font-size: $normal-font;
+            font-weight: $font-weight;
+            letter-spacing: 1px;
+        }
+
+        .card-subtitle {
+            margin-top: 1rem;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        .card-price {
+            position: relative;
+            top: 30%;
+            @include small-mobile {
+                top: 22%;
+            }
+        }
+        .card-pricechange {
+            position: relative;
+            top: 35%;
+            color: rgb(69, 230, 69);
+            @include small-mobile {
+                top: 25%;
+            }
+        }
+        .card-btn {
+            position: relative;
+            top: 40%;
+            left: 40%;
+            width: fit-content;
+
+            @include small-mobile {
+                top: 30%;
+            }
+
+            button {
+                outline: none;
+                border: none;
+                background: transparent;
+                color: $font-color;
+
+                .fa-arrow-right {
+                    width: 3rem;
+                    height: 3rem;
+                    font-size: 1.7rem;
+                    padding-top: 0.7rem;
+                    background-color: #fffef6;
+                    box-shadow: 2px 2px 4px #dbdbdb;
+                    border-radius: 50%;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .main-token-info {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2%;
+
+        @include small-mobile {
+            width: 100%;
+            gap: 5%;
+        }
+
+        .headertoken-info {
+            margin: 0 auto;
+            width: 70%;
+            font-size: $normal-font + 0.5;
+        }
+        .subtoken-info {
+            margin: 0 auto;
+            width: 70%;
+            font-size: $normal-font;
+        }
+
+        .main-token-free-ac-btn {
+            margin: 0 auto;
+            width: 70%;
+            .token-free-ac-btn {
+                @include create-btn-style;
+                margin-top: 2.5rem;
+            }
+        }
+    }
+}
