@@ -1,26 +1,21 @@
-html {
+:root {
     font-size: 16px;
 }
 
 @include small-mobile {
-    html {
-        font-size: 50%;
+    :root {
+        font-size: 12px;
     }
 }
 @include mobile {
-    html {
-        font-size: 50%;
+    :root {
+        font-size: 14px;
     }
 }
 
-@include tablet {
-    html {
-        font-size: 100%;
-    }
-}
 @include HDdesktop {
-    html {
-        font-size: 120%;
+    :root {
+        font-size: 18px;
     }
 }
 * {
